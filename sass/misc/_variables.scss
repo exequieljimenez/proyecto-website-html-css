@@ -1,0 +1,29 @@
+// colors
+$colors:(
+    base: #F6F7EB,
+    primary: #6E8894,
+    secondary: #E69597,
+    tertiary: #9e2b2574,
+    text-color: #2b2b2b,
+    black-text: rgb(0, 0, 0)
+);
+
+// fonts
+$fonts:(
+    title-font: ('Vollkorn SC', serif),
+    text-font: ('Poppins', sans-serif),
+);
+
+// spacings
+$spacings: (
+    spacing: 2rem,
+    spacing-lesser: 1rem,
+);
+
+// font sizes
+$fontSizes: (
+    titles: 3.2em,
+    subtitles: 2.4em,
+    text-size: 2em,
+    smaller-text: 1.6em,
+);

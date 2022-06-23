@@ -1,0 +1,33 @@
+footer {
+    background-color: map-get($colors, primary);
+    grid-area: footer;
+    font-weight: bold;
+
+    section {
+        padding: map-get($spacings, spacing);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        article {
+            p {
+                font-family: map-get($fonts, title-font);
+                color: map-get($colors, text-color);
+            }
+            div {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    footer {
+        section {
+            flex-direction: column;
+            text-align: center;
+            gap: map-get($spacings, spacing);
+        }
+    }
+}

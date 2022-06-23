@@ -1,0 +1,38 @@
+// external imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn+SC&display=swap');
+
+// variables
+@import './misc/variables';
+
+// normalize
+@import './misc/normalize';
+
+// keyframes
+@import './misc/keyframes';
+
+// header
+@import './partials/header';
+
+// footer
+@import './partials/footer';
+
+// main
+@import './partials/main';
+
+// sidebar
+@import './partials/aside';
+
+// home page
+@import './views/home';
+
+// menu page
+@import './views/menu';
+
+// nosotros page
+@import './views/nosotros';
+
+// twin_peaks page
+@import './views/twin-peaks';
+
+// contacto page
+@import './views/contacto';

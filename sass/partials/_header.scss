@@ -1,0 +1,96 @@
+// formato flex para el header con logo y barra de navegación
+header {
+    background-color: map-get($colors, primary);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: map-get($spacings, spacing);
+    img:hover {
+        filter: saturate(130%);
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: map-get($spacings, spacing);
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: map-get($spacings, spacing);
+        }
+        li {
+            list-style-type: none;
+            a {
+                text-decoration-line: none;
+                color: map-get($colors, text-color);
+                font-family: map-get($fonts, title-font);
+                font-size: map-get($fontSizes, subtitles);
+                font-weight: bold;
+                border: 2px solid rgba(255, 255, 255, 0);
+                // efectos del hover para los enlaces
+                transition: all 0.17s linear;
+                &:hover {
+                    border-bottom: 2px solid map-get($colors, black-text);
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+// media queries para cambio de tamaño de fuente y organización del header en filas o columnas de acuerdo al dispositivo utilizado
+@media screen and (max-width: 912px) {
+    header {
+        flex-direction: column;
+
+        ul {
+            flex-direction: row;
+            align-items: center;
+            gap: map-get($spacings, spacing)-lesser;
+            padding-top: map-get($spacings, spacing);
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    header {
+        flex-direction: column;
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+            padding-top: map-get($spacings, spacing);
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    header {
+        flex-direction: column;
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+            gap: map-get($spacings, spacing-lesser);
+            padding-top: map-get($spacings, spacing);
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        flex-direction: column;
+        padding: map-get($spacings, spacing-lesser);
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+            gap: map-get($spacings, spacing-lesser);
+            padding: map-get($spacings, spacing-lesser);
+            li a {
+                font-size: map-get($fontSizes, smaller-text);
+            }
+        }
+    }
+}

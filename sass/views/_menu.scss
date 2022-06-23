@@ -1,0 +1,37 @@
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding-left: map-get($spacings, spacing);
+    padding-right: map-get($spacings, spacing);
+    align-items: center;
+    background-repeat: repeat;
+    gap: map-get($spacings, spacing);
+    border-radius: 10%;
+    padding-bottom: map-get($spacings, spacing);
+    margin-bottom: map-get($spacings, spacing);
+    margin-left: map-get($spacings, spacing)-lesser;
+    margin-right: map-get($spacings, spacing)-lesser;
+    outline: solid map-get($colors, text-color) 1px;
+
+    &--beverages {
+        @extend .menu;
+        background-image: url(../media/cocktail-drinks-seamless-vector-pattern-2.jpg);
+    }
+
+    &--sandwiches {
+        @extend .menu;
+        background-image: url(../media/sandwich-pattern.svg);
+    }
+
+    &--everythingElse {
+        @extend .menu;
+        background-image: url(../media/pink-cake-1.jpg);
+    }
+}

@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  /* Para calcular por 10 los em y rem */
+  font-size: 62.5%; }
+
+body {
+  /* Este es el grid layout del sitio*/
+  display: grid;
+  grid-template-areas: "header header" "main aside" "footer footer";
+  grid-template-columns: 6fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh; }
+
+.pageTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center; }
+
+.blurb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: 2rem auto; }
+
+h1 {
+  font-family: "Vollkorn SC", serif;
+  font-size: 3.2em;
+  color: #2b2b2b; }
+
+h2 {
+  font-family: "Vollkorn SC", serif;
+  font-size: 2.4em;
+  color: #2b2b2b; }
+
+h3 {
+  font-family: "Vollkorn SC", serif;
+  font-size: 2em;
+  color: #2b2b2b; }
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  color: black; }
+
+@media screen and (max-width: 820px) {
+  body {
+    grid-template-areas: "header" "main" "aside" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto auto;
+    min-height: 100vh; }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%; } }
+
+@keyframes from-left {
+  0% {
+    transform: translate(-1800px, 0px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+@keyframes from-right {
+  0% {
+    transform: translate(1800px, 0px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+@keyframes from-bottom {
+  0% {
+    transform: translate(0, 1800px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+@keyframes materialize {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+header {
+  background-color: #6E8894;
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem; }
+  header img:hover {
+    filter: saturate(130%); }
+  header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; }
+    header ul div {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem; }
+    header ul li {
+      list-style-type: none; }
+      header ul li a {
+        text-decoration-line: none;
+        color: #2b2b2b;
+        font-family: "Vollkorn SC", serif;
+        font-size: 2.4em;
+        font-weight: bold;
+        border: 2px solid rgba(255, 255, 255, 0);
+        transition: all 0.17s linear; }
+        header ul li a:hover {
+          border-bottom: 2px solid black;
+          color: black; }
+
+@media screen and (max-width: 912px) {
+  header {
+    flex-direction: column; }
+    header ul {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem -lesser;
+      padding-top: 2rem; } }
+
+@media screen and (max-width: 540px) {
+  header {
+    flex-direction: column; }
+    header ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 2rem; } }
+
+@media screen and (max-width: 414px) {
+  header {
+    flex-direction: column; }
+    header ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 2rem; } }
+
+@media screen and (max-width: 320px) {
+  header {
+    flex-direction: column;
+    padding: 1rem; }
+    header ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem; }
+      header ul li a {
+        font-size: 1.6em; } }
+
+footer {
+  background-color: #6E8894;
+  grid-area: footer;
+  font-weight: bold; }
+  footer section {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    footer section article p {
+      font-family: "Vollkorn SC", serif;
+      color: #2b2b2b; }
+    footer section article div {
+      display: flex;
+      justify-content: center; }
+
+@media screen and (max-width: 820px) {
+  footer section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem; } }
+
+main {
+  grid-area: main;
+  background-color: #F6F7EB; }
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #E69597;
+  font-family: "Vollkorn SC", serif; }
+
+.asideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem; }
+
+.indexGallery {
+  display: grid;
+  grid-template-areas: "fotoUno fotoDos" "fotoTres fotoCuatro";
+  grid-template-rows: 362px 395px;
+  grid-template-columns: 624px 382px;
+  justify-content: center;
+  gap: 2rem; }
+  .indexGallery__first-img {
+    grid-area: fotoUno;
+    animation-name: from-left;
+    animation-duration: 1s; }
+    .indexGallery__first-img:hover {
+      filter: drop-shadow(-8px -8px 10px gray); }
+  .indexGallery__second-img {
+    grid-area: fotoDos;
+    animation-name: from-right;
+    animation-duration: 1s; }
+    .indexGallery__second-img:hover {
+      filter: drop-shadow(8px -8px 10px gray); }
+  .indexGallery__third-img {
+    grid-area: fotoTres;
+    animation-name: from-left;
+    animation-duration: 1s; }
+    .indexGallery__third-img:hover {
+      filter: drop-shadow(-8px 8px 10px gray); }
+  .indexGallery__fourth-img {
+    grid-area: fotoCuatro;
+    animation-name: from-right;
+    animation-duration: 1s; }
+    .indexGallery__fourth-img:hover {
+      filter: drop-shadow(8px 8px 10px gray); }
+
+@media screen and (max-width: 820px) {
+  .indexGallery {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem; } }
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.menu, .menu--beverages, .menu--sandwiches, .menu--everythingElse {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: center;
+  background-repeat: repeat;
+  gap: 2rem;
+  border-radius: 10%;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem -lesser;
+  margin-right: 2rem -lesser;
+  outline: solid #2b2b2b 1px; }
+  .menu--beverages {
+    background-image: url(../media/cocktail-drinks-seamless-vector-pattern-2.jpg); }
+  .menu--sandwiches {
+    background-image: url(../media/sandwich-pattern.svg); }
+  .menu--everythingElse {
+    background-image: url(../media/pink-cake-1.jpg); }
+
+.nameCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .nameCard__each, .nameCard__each--reverse {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    gap: 2rem; }
+    .nameCard__each--reverse {
+      flex-direction: row-reverse; }
+  .nameCard__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .nameCard__name {
+    padding: 2rem;
+    text-align: center; }
+  .nameCard__description {
+    padding: 2rem;
+    font-weight: 300; }
+  .nameCard__image {
+    padding: 2rem;
+    border-radius: 10%;
+    animation-name: materialize;
+    animation-duration: 1s; }
+
+@media screen and (max-width: 820px) {
+  .nameCard__each, .nameCard__each--reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; } }
+
+.landscapeGallery {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 290px 248px;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  animation-name: from-left;
+  animation-duration: 1s; }
+
+.historyText {
+  animation-name: from-bottom;
+  animation-duration: 1s; }
+
+@media screen and (max-width: 820px) {
+  .landscapeGallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem; } }
+
+.forms {
+  font-size: 2em;
+  font-family: "Vollkorn SC", serif;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem; }
+
+@media screen and (max-width: 820px) {
+  .forms div {
+    display: flex;
+    flex-direction: column;
+    text-align: center; } }

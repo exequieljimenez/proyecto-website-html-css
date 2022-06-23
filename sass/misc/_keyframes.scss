@@ -1,0 +1,35 @@
+@keyframes from-left {
+    0% {
+        transform: translate(-1800px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes from-right {
+    0% {
+        transform: translate(1800px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes from-bottom {
+    0% {
+        transform: translate(0, 1800px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes materialize {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
