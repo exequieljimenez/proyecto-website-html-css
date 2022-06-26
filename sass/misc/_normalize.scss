@@ -30,13 +30,10 @@ body {
 }
 
 .blurb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: map-get($spacings, spacing);
+    padding: map-get($spacings, spacing-lesser);
     text-align: center;
     max-width: 1100px;
-    margin: map-get($spacings, spacing) auto;
+    margin: map-get($spacings, spacing-lesser) auto map-get($spacings, spacing);
 }
 
 @mixin textFormat($font-type, $font-size, $font-color) {
@@ -61,6 +58,72 @@ p {
     @include textFormat(map-get($fonts, text-font), map-get($fontSizes, text-size), map-get($colors, black-text));
 }
 
+.italics {
+    font-style: italic;
+}
+
+.inputField {
+    padding: map-get($spacings, spacing-lesser);
+    border-radius: 7%;
+    border-color: map-get($colors, secondary);
+    margin: map-get($spacings, spacing-lesser);
+    font-family: map-get($fonts, text-font);
+    font-size: map-get($fontSizes, tiny-text);
+    text-align: center;
+    &:focus {
+        outline-color: map-get($colors, primary);
+    }
+}
+
+@mixin gallery-image($animation, $hoverEffect, $animTime: 1s) {
+    animation-name: $animation;
+    animation-duration: $animTime;
+    &:hover {
+        filter: $hoverEffect;
+    }
+} 
+
+.gallery {
+    display: grid;
+    grid-template-areas:
+        "fotoUno fotoDos"
+        "fotoTres fotoCuatro";
+    justify-content: center;
+    gap: map-get($spacings, spacing);
+    padding: map-get($spacings, spacing);
+
+    
+
+    // img:nth-of-type(1) {
+    //     grid-area: fotoUno;
+    //     animation-duration: 1s;
+    // }
+
+    img:nth-of-type(2) {
+        grid-area: fotoDos;
+        animation-duration: 1s;
+    }
+
+    img:nth-of-type(3) {
+        grid-area: fotoTres;
+        animation-duration: 1s;
+    }
+
+    img:nth-of-type(4) {
+        grid-area: fotoCuatro;
+        animation-duration: 1s;
+    }
+}
+
+.inputButton {
+    padding: map-get($spacings, spacing-tiny);
+    border-color: map-get($colors, secondary);
+    border-radius: 15%;
+    font-family: map-get($fonts, title-font);
+
+    
+}
+
 @media screen and (max-width: 820px) {
     body {
         grid-template-areas:
@@ -73,9 +136,47 @@ p {
         min-height: 100vh;
     }
 
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        gap: map-get($spacings, spacing-lesser);
+        padding: map-get($spacings, spacing-lesser);
+        img {
+            border-radius: 10%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    h1 {
+        font-size: map-get($fontSizes, subtitles);
+    }
+
+    h2 {
+        font-size: map-get($fontSizes, text-size);
+    }
+
     img {
         width: 100%;
         height: auto;
         border-radius: 10%;
+    }
+
+    .blurb {
+        font-size: map-get($fontSizes, smaller-text);
+        padding: map-get($spacings, spacing-lesser);
+        text-align: center;
+        margin: map-get($spacings, spacing-lesser) auto map-get($spacings, spacing);
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .blurb {
+        font-size: map-get($fontSizes, tiny-text);
+        padding: map-get($spacings, spacing-lesser);
+        text-align: center;
+        margin: map-get($spacings, spacing-lesser) auto map-get($spacings, spacing);
     }
 }

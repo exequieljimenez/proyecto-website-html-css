@@ -18,6 +18,7 @@ $fonts:(
 $spacings: (
     spacing: 2rem,
     spacing-lesser: 1rem,
+    spacing-tiny: 0.5rem,
 );
 
 // font sizes
@@ -25,5 +26,7 @@ $fontSizes: (
     titles: 3.2em,
     subtitles: 2.4em,
     text-size: 2em,
-    smaller-text: 1.6em,
+    small-text: 1.6em,
+    smaller-text: 1em,
+    tiny-text: 0.8em,
 );

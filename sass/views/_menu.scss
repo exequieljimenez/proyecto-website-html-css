@@ -1,37 +1,79 @@
 .menuContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin: auto;
+    padding: map-get($spacings, spacing);
+    gap: map-get($spacings, spacing);
 }
 
 .menu {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    padding-left: map-get($spacings, spacing);
-    padding-right: map-get($spacings, spacing);
-    align-items: center;
-    background-repeat: repeat;
-    gap: map-get($spacings, spacing);
-    border-radius: 10%;
-    padding-bottom: map-get($spacings, spacing);
-    margin-bottom: map-get($spacings, spacing);
-    margin-left: map-get($spacings, spacing)-lesser;
-    margin-right: map-get($spacings, spacing)-lesser;
-    outline: solid map-get($colors, text-color) 1px;
+    padding: map-get($spacings, spacing);
+    border-radius: 5%;
+    border: solid 1px map-get($colors, text-color);
+    animation-duration: 1s;
+    div {
+        padding: map-get($spacings, spacing-tiny);
+        border-bottom: 1px solid black;
+        &:hover {
+            font-weight: 600;
+        }
+    }
+    span {
+        font-weight: bold;
+        padding-left: map-get($spacings, spacing);
+    }
+    h2 {
+        margin-bottom: map-get($spacings, spacing);
+        color: map-get($colors, black-text);
+    }
+    .italics {
+        font-size: map-get($fontSizes, small-text);
+    }
 
     &--beverages {
         @extend .menu;
-        background-image: url(../media/cocktail-drinks-seamless-vector-pattern-2.jpg);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-image: url(../media/food-1.svg);
+        animation-name: explode;
     }
 
     &--sandwiches {
         @extend .menu;
-        background-image: url(../media/sandwich-pattern.svg);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-image: url(../media/food-2.svg);
+        animation-name: explode;
     }
 
     &--everythingElse {
         @extend .menu;
-        background-image: url(../media/pink-cake-1.jpg);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-image: url(../media/food-3.svg);
+        animation-name: implode;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .menuContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .menuContainer {
+        display: flex;
+        flex-direction: column;
+        font-size: map-get($fontSizes, tiny-text);
     }
 }

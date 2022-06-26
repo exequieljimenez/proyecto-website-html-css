@@ -61,6 +61,10 @@ header {
             flex-direction: column;
             align-items: center;
             padding-top: map-get($spacings, spacing);
+            li a {
+                font-size: map-get($fontSizes, text-size);
+            }
+            
         }
     }
 }
@@ -89,7 +93,7 @@ header {
             gap: map-get($spacings, spacing-lesser);
             padding: map-get($spacings, spacing-lesser);
             li a {
-                font-size: map-get($fontSizes, smaller-text);
+                font-size: map-get($fontSizes, small-text);
             }
         }
     }

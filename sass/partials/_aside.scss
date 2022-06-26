@@ -14,5 +14,10 @@ aside {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: map-get($spacings, spacing);
+    padding: map-get($spacings, spacing-lesser);
+    form {
+        input {
+            font-size: map-get($fontSizes, small-text);
+        }
+    }
 }
