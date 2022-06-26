@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Poppins&family=Vollkorn+SC&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +43,7 @@ h3 {
   color: #2b2b2b; }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   font-size: 2em;
   color: black; }
 
@@ -55,7 +55,7 @@ p {
   border-radius: 7%;
   border-color: #E69597;
   margin: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   font-size: 0.8em;
   text-align: center; }
   .inputField:focus {
