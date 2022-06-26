@@ -1,3 +1,4 @@
+// Estilo para el menú presentado como tres cartas en grid
 .menuContainer {
     max-width: 1100px;
     display: grid;
@@ -62,6 +63,8 @@
         animation-name: implode;
     }
 }
+
+// Media queries para presentar el menú con flex
 
 @media screen and (max-width: 912px) {
     .menuContainer {

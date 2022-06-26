@@ -1,3 +1,4 @@
+// Para resetear los estilo por defecto del navegador
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +6,11 @@
 }
 
 html {
-    /* Para calcular por 10 los em y rem */
     font-size: 62.5%;
 }
 
+// Grid layout para el sitio
 body {
-    /* Este es el grid layout del sitio*/
     display: grid;
     grid-template-areas:
         "header header"
@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
 }
 
+// Estilo para los títulos y subtítulos
 .pageTitles {
     display: flex;
     flex-direction: column;
@@ -29,6 +30,7 @@ body {
     text-align: center;
 }
 
+// Estilo para los párrafos informativos o descriptivos
 .blurb {
     padding: map-get($spacings, spacing-lesser);
     text-align: center;
@@ -36,6 +38,8 @@ body {
     margin: map-get($spacings, spacing-lesser) auto map-get($spacings, spacing);
 }
 
+
+// Estilo para fuentes
 @mixin textFormat($font-type, $font-size, $font-color) {
     font-family: $font-type;
     font-size: $font-size;
@@ -62,6 +66,7 @@ p {
     font-style: italic;
 }
 
+// Estilo para inputs
 .inputField {
     padding: map-get($spacings, spacing-lesser);
     border-radius: 7%;
@@ -75,6 +80,14 @@ p {
     }
 }
 
+.inputButton {
+    padding: map-get($spacings, spacing-tiny);
+    border-color: map-get($colors, secondary);
+    border-radius: 15%;
+    font-family: map-get($fonts, title-font); 
+}
+
+// Estilo para galerías de imágenes usando grid para desktop y flex para mobile
 @mixin gallery-image($animation, $hoverEffect, $animTime: 1s) {
     animation-name: $animation;
     animation-duration: $animTime;
@@ -92,37 +105,24 @@ p {
     gap: map-get($spacings, spacing);
     padding: map-get($spacings, spacing);
 
-    
-
-    // img:nth-of-type(1) {
-    //     grid-area: fotoUno;
-    //     animation-duration: 1s;
-    // }
+    img:nth-of-type(1) {
+        grid-area: fotoUno;
+    }
 
     img:nth-of-type(2) {
         grid-area: fotoDos;
-        animation-duration: 1s;
     }
 
     img:nth-of-type(3) {
         grid-area: fotoTres;
-        animation-duration: 1s;
     }
 
     img:nth-of-type(4) {
         grid-area: fotoCuatro;
-        animation-duration: 1s;
     }
 }
 
-.inputButton {
-    padding: map-get($spacings, spacing-tiny);
-    border-color: map-get($colors, secondary);
-    border-radius: 15%;
-    font-family: map-get($fonts, title-font);
-
-    
-}
+// Media queries para los estilos de la página
 
 @media screen and (max-width: 820px) {
     body {

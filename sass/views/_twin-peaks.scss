@@ -1,3 +1,4 @@
+// Estilo particular para el grid de la galería de la página sobre el pueblo
 .gallery-landscape {
     @extend .gallery;
 
@@ -22,11 +23,13 @@
     }
 }
 
+// Animación para el texto sobre historia
 .historyText {
     animation-name: from-bottom;
     animation-duration: 1s;
 }
 
+// Media queries para organizar la galería con flex
 @media screen and (max-width: 912px) {
     .gallery-landscape {
         img:nth-of-type(1) {
