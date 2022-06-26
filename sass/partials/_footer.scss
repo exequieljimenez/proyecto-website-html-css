@@ -28,6 +28,11 @@ footer {
         font-size: map-get($fontSizes, small-text);
         color: map-get($colors, text-color);
         padding: map-get($spacings, spacing-tiny);
+        p {
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
         a {
             padding-left: map-get($spacings, spacing-lesser);
             text-decoration-line: none;
@@ -44,6 +49,9 @@ footer {
             text-align: center;
             gap: map-get($spacings, spacing);
         }
+        .copyRight {
+            gap: map-get($spacings, spacing-tiny);
+        }
     }
 }
 
@@ -55,5 +63,8 @@ footer {
             gap: map-get($spacings, spacing);
             font-size: map-get($fontSizes, tiny-text);
         }
+        .copyRight {
+            gap: map-get($spacings, spacing-tiny);
+        }
     }
-}
+    }
