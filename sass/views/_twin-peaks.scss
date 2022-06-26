@@ -9,7 +9,7 @@
 
     img:nth-of-type(2) {
         filter: grayscale(50%);
-        @include gallery-image(skew-img, grayscale(0%))
+        @include gallery-image(skew-img-reverse, grayscale(0%))
     }
 
     img:nth-of-type(3) {

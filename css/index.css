@@ -144,9 +144,19 @@ p {
 
 @keyframes skew-img {
   0% {
-    transform: skew(20deg, 10deg); }
+    transform: skewX(-5deg); }
+  50% {
+    transform: skewX(5deg); }
   100% {
-    transform: skew(0deg, 0deg); } }
+    transform: skewX(0deg); } }
+
+@keyframes skew-img-reverse {
+  0% {
+    transform: skewY(5deg); }
+  50% {
+    transform: skewY(-5deg); }
+  100% {
+    transform: skewY(0deg); } }
 
 @keyframes explode {
   0% {
@@ -485,7 +495,7 @@ aside {
 
 .gallery-landscape img:nth-of-type(2) {
   filter: grayscale(50%);
-  animation-name: skew-img;
+  animation-name: skew-img-reverse;
   animation-duration: 1s; }
   .gallery-landscape img:nth-of-type(2):hover {
     filter: grayscale(0%); }

@@ -36,11 +36,29 @@
 
 @keyframes skew-img {
     0% {
-        transform: skew(20deg,10deg);
+        transform: skewX(-5deg);
+    }
+
+    50% {
+        transform: skewX(5deg)
     }
 
     100% {
-        transform: skew(0deg, 0deg);
+        transform: skewX(0deg);
+    }
+}
+
+@keyframes skew-img-reverse {
+    0% {
+        transform: skewY(5deg);
+    }
+
+    50% {
+        transform: skewY(-5deg);
+    }
+
+    100% {
+        transform: skewY(0deg);
     }
 }
 
