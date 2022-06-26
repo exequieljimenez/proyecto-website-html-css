@@ -174,7 +174,7 @@ p {
   100% {
     transform: scale(1, 1); } }
 
-@keyframes rotate-img {
+@keyframes rotate-on-x-axis {
   0% {
     transform: rotatex(180deg); }
   100% {
@@ -538,7 +538,7 @@ aside {
   gap: 2rem;
   padding: 2rem; }
   .forms div {
-    animation-name: rotate-img;
+    animation-name: rotate-on-x-axis;
     animation-duration: 1s;
     display: flex;
     flex-direction: row;

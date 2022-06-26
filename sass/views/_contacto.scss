@@ -9,7 +9,7 @@
     gap: map-get($spacings, spacing);
     padding: map-get($spacings , spacing);
     div {
-        animation-name: rotate-img;
+        animation-name: rotate-on-x-axis;
         animation-duration: 1s;
         display: flex;
         flex-direction: row;
