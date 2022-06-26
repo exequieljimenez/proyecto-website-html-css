@@ -87,7 +87,7 @@ p {
     font-family: map-get($fonts, title-font); 
 }
 
-// Estilo para galerías de imágenes usando grid para desktop y flex para mobile
+// Estilo para imágenes de galerías usando mixin
 @mixin gallery-image($animation, $hoverEffect, $animTime: 1s) {
     animation-name: $animation;
     animation-duration: $animTime;
@@ -96,6 +96,7 @@ p {
     }
 } 
 
+// Estilo para galerías de imágenes usando grid para desktop y flex para mobile
 .gallery {
     display: grid;
     grid-template-areas:

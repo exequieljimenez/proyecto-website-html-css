@@ -1,4 +1,4 @@
-// colors
+// map con colores
 $colors:(
     base: #F6F7EB,
     primary: #6E8894,
@@ -8,20 +8,20 @@ $colors:(
     black-text: rgb(0, 0, 0)
 );
 
-// fonts
+// map con fuentes
 $fonts:(
     title-font: ('Vollkorn SC', serif),
     text-font: ('Poppins', sans-serif),
 );
 
-// spacings
+// map con espaciados
 $spacings: (
     spacing: 2rem,
     spacing-lesser: 1rem,
     spacing-tiny: 0.5rem,
 );
 
-// font sizes
+// map con tamaño de fuentes
 $fontSizes: (
     titles: 3.2em,
     subtitles: 2.4em,
