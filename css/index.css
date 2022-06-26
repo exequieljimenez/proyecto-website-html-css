@@ -144,19 +144,19 @@ p {
 
 @keyframes skew-img {
   0% {
-    transform: skewX(-5deg); }
+    transform: skew(4deg, -2deg); }
   50% {
-    transform: skewX(5deg); }
+    transform: skew(-4deg, 2deg); }
   100% {
-    transform: skewX(0deg); } }
+    transform: skew(0deg); } }
 
 @keyframes skew-img-reverse {
   0% {
-    transform: skewY(5deg); }
+    transform: skew(-4deg, 2deg); }
   50% {
-    transform: skewY(-5deg); }
+    transform: skew(4deg, -2deg); }
   100% {
-    transform: skewY(0deg); } }
+    transform: skew(0deg); } }
 
 @keyframes explode {
   0% {
